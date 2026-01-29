@@ -1,18 +1,18 @@
-# OOP Practice
-Hello! I'm the Lord Henry, or Dom Henrique in Brazilian Portuguese, a Computer Science student in journey to an internship.
+# Prática de POO
+Hey! Aqui é o Dom Henrique!
 
-In this repository, i'm sharing my first experiences with Java programming language, documenting my learn and seeing my evolution.
-# How to clone this repository?
-I recommend that you clone this repository in JetBrain's IDE [IntelliJ IDEA](https://www.jetbrains.com/idea/) by simplicity to install and compile JVM, but you are free to use the IDE of your choice.
+Dei início aos meus estudos em Java no final de 2025 e pude ver o potencial da linguagem em algumas matérias online. Amplamente usada no mundo inteiro, o Java é usado para a construção de
+- Sistemas bancários eficientes;
+- Gerenciamento de bancos de dados;
+- Criação de sistemas web poderosos;
+- Desenvolvimento de jogos e afins.
 
-In your terminal, write this code:
+Neste repositório, você verá alguns projetos desenvolvidos aplicando conceitos de **Orientação a Objetos**, como *Herança, Polimorfismo, Abstração e Encapsulamento*.
+# Como clonar este repositório?
+Recomendo você utilizar o **Intelli J IDEA**, da JetBrains. Após a instalação, vá até o seu terminal e digite:
 ```
 git clone https://github.com/Dom-Henrique/OOP---Java.git
 ```
-and wait few seconds to see this repository into your computer!
+O repositório será baixado e clonado na sua máquina.
 
-*This repository will be update along time*
-
-**By Dom Henrique, from Brazil**
-
-***British English B2***
+***Dom Henrique, 2026.***
