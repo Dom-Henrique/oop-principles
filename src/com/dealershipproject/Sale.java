@@ -1,11 +1,13 @@
 package com.dealershipproject;
+import java.time.LocalDate;
 
 public class Sale {
-    private String paymentMethod, saleDate;
+    private String paymentMethod;
+    private LocalDate saleDate;
     private double saleValue;
     Vehicle vehicle;
     Customer customer;
-    public Sale(String paymentMethod, String saleDate, double saleValue, Vehicle vehicle, Customer customer){
+    public Sale(String paymentMethod, LocalDate saleDate, double saleValue, Vehicle vehicle, Customer customer){
         this.paymentMethod = paymentMethod;
         this.saleDate = saleDate;
         this.saleValue = saleValue;
@@ -21,11 +23,11 @@ public class Sale {
         this.paymentMethod = paymentMethod;
     }
 
-    public String getSaleDate() {
+    public LocalDate getSaleDate() {
         return saleDate;
     }
 
-    public void setSaleDate(String saleDate) {
+    public void setSaleDate(LocalDate saleDate) {
         this.saleDate = saleDate;
     }
 

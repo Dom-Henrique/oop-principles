@@ -38,6 +38,7 @@ public class Main {
                 int year = sc.nextInt();
                 System.out.println("Avaliable (true or false): ");
                 boolean avaliable = sc.hasNext();
+                sc.nextLine();
                 System.out.println("Price: ");
                 double price = sc.nextDouble();
                 vehicle = new Vehicle(brand, model, licensePlate, year, avaliable, price);
@@ -95,6 +96,7 @@ public class Main {
             System.out.println("Your id: " + id);
             customer = new Customer(name, phone, email, id);
             customer.toString();
+            dealership.addUser(customer);
             System.out.println("======== OPTIONS ========\n" +
                     "1 - Build a vehicle\n" +
                     "2 - Delete my account");
@@ -121,8 +123,11 @@ public class Main {
                     System.out.println("aaaaa");
                 }
                 */
-                dealership.getCustomers().remove(customer);
+                // SEMPRE que eu quiser remover algo, é pelo índice
+                int index = dealership.getCustomers().indexOf(customer);
+                dealership.getCustomers().remove(index);
                 System.out.println("Deleted");
+                dealership.getCustomers().toString();
             }
         }
     }
