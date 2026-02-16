@@ -6,11 +6,13 @@ public class Seminar {
     private String name;
     private LocalDate date;
     private Local local;
+    private Student[] students;
 
-    public Seminar(String name, LocalDate date, Local local) {
+    public Seminar(String name, LocalDate date, Local local, int maxTeams) {
         this.name = name;
         this.date = date;
         this.local = local;
+        this.students = new Student[maxTeams];
     }
 
     public String getName() {
@@ -35,5 +37,13 @@ public class Seminar {
 
     public void setLocal(Local local) {
         this.local = local;
+    }
+
+    public Student[] getStudents() {
+        return students;
+    }
+
+    public void setStudents(Student[] students) {
+        this.students = students;
     }
 }
