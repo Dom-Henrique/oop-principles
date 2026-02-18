@@ -3,10 +3,10 @@ package com.dealershipproject;
 public class Vehicle {
     private String brand, model, licensePlate;
     private int year;
-    private boolean avaliable;
+    private Avaliable avaliable;
     private double price;
     // Constructor
-    public Vehicle(String brand, String model, String licensePlate, int year, boolean avaliable, double price){
+    public Vehicle(String brand, String model, String licensePlate, int year, Avaliable avaliable, double price){
         this.brand = brand;
         this.model = model;
         this.licensePlate = licensePlate;
@@ -15,11 +15,11 @@ public class Vehicle {
         this.price = price;
     }
     // Change avaliability
-    public boolean changeAv(){
-        if (avaliable == true){
-            return this.avaliable = false;
+    public Avaliable changeAv(){
+        if (avaliable.equals(Avaliable.NOTAVALIABLE)){
+            return this.avaliable = Avaliable.NOTAVALIABLE;
         } else{
-            return this.avaliable = true;
+            return this.avaliable = Avaliable.AVALIABLE;
         }
     }
     // Getters and Setters to access the private variables
@@ -55,11 +55,11 @@ public class Vehicle {
         this.year = year;
     }
 
-    public boolean isAvaliable() {
+    public Avaliable isAvaliable() {
         return avaliable;
     }
 
-    public void setAvaliable(boolean avaliable) {
+    public void setAvaliable(Avaliable avaliable) {
         this.avaliable = avaliable;
     }
 
