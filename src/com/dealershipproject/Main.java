@@ -43,10 +43,15 @@ public class Main {
                         System.out.println("Year: ");
                         int year = sc.nextInt();
                         System.out.println("Avaliable (true or false): ");
-                        boolean avaliable = sc.nextBoolean();
+                        boolean isAvaliable = sc.nextBoolean();
                         System.out.println("Price: ");
                         double price = sc.nextDouble();
-                        vehicle = new Vehicle(brand, model, licensePlate, year, avaliable, price);
+                        if (isAvaliable == true){
+                            vehicle = new Vehicle(brand, model, licensePlate, year, Avaliable.AVALIABLE, price);
+                        }
+                        else{
+                            vehicle = new Vehicle(brand, model, licensePlate, year, Avaliable.NOTAVALIABLE, price);
+                        }
                         dealership.addVehicle(vehicle);
                         System.out.println(dealership.getVehicles());
                     } else if (option == 2) {
