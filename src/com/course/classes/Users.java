@@ -1,5 +1,6 @@
 package com.course.classes;
 
+import com.course.enums.PayMethods;
 import com.course.enums.Status;
 import com.course.enums.UserType;
 import java.time.LocalDate;
@@ -10,6 +11,8 @@ public class Users {
     private UserType userType;
     private Status activeAccount;
     private ArrayList<Course> rolledCourses = new ArrayList<>();
+    private double cash;
+    private PayMethods payMethod;
     public Users(String name, String email, UserType userType, Status activeAccount){
         this.name = name;
         this.email = email;
@@ -17,12 +20,13 @@ public class Users {
         this.activeAccount = activeAccount;
     }
 
-    public Users(String name, String email, UserType userType, Status activeAccount, ArrayList<Course> rolledCourses) {
+    public Users(String name, String email, UserType userType, Status activeAccount,double cash) {
         this.name = name;
         this.email = email;
         this.userType = userType;
         this.activeAccount = activeAccount;
         this.rolledCourses = rolledCourses;
+        this.cash = cash;
     }
 
     public String getName() {
@@ -63,5 +67,21 @@ public class Users {
 
     public void setRolledCourses(ArrayList<Course> rolledCourses) {
         this.rolledCourses = rolledCourses;
+    }
+
+    public double getCash() {
+        return cash;
+    }
+
+    public void setCash(double cash) {
+        this.cash = cash;
+    }
+
+    public PayMethods getPayMethod() {
+        return payMethod;
+    }
+
+    public void setPayMethod(PayMethods payMethod) {
+        this.payMethod = payMethod;
     }
 }
