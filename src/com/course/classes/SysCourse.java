@@ -3,7 +3,7 @@ package com.course.classes;
 import java.util.ArrayList;
 
 // Responsável pelas listas
-public class System {
+public class SysCourse {
     private ArrayList<Users> users = new ArrayList<>();
     private ArrayList<Roll> rolls = new ArrayList<>();
     private ArrayList<Course> courses = new ArrayList<>();
