@@ -1,4 +1,4 @@
 package com.course.enums;
-
-public enum Payments {
+public enum PayMethods{
+    PAYPAL, CREDIT_CARD, DEBIT_CARD;
 }
