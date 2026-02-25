@@ -103,4 +103,11 @@ public class Course {
     public void setUsersAvaliations(ArrayList<Float> usersAvaliations) {
         this.usersAvaliations = usersAvaliations;
     }
+
+    public Status publicInformations(Course course){
+        if(course.getStatus() == Status.UNACTIVE){
+            course.setStatus(Status.ACITVE);
+        }
+        return course.getStatus();
+    }
 }
