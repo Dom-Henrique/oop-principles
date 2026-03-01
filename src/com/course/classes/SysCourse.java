@@ -5,6 +5,8 @@ import com.course.enums.Status;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.Stack;
 
 // Responsável pelas listas
 public class SysCourse {
@@ -12,6 +14,8 @@ public class SysCourse {
     private ArrayList<Roll> rolls = new ArrayList<>();
     private ArrayList<Course> courses = new ArrayList<>();
     private HashMap<Users, Status> coursesPayed = new HashMap<>();
+    private LinkedList<Double> avaliations = new LinkedList<>();
+    private double totalAvaliations = avaliations.size();
 
     public ArrayList<Users> getUsers() {
         return users;
@@ -43,5 +47,28 @@ public class SysCourse {
 
     public void setCoursesPayed(HashMap<Users, Status> coursesPayed) {
         this.coursesPayed = coursesPayed;
+    }
+
+    public LinkedList<Double> getAvaliations() {
+        return avaliations;
+    }
+
+    public void setAvaliations(LinkedList<Double> avaliations) {
+        this.avaliations = avaliations;
+    }
+
+    public double getTotalAvaliations() {
+        return totalAvaliations;
+    }
+
+    public void setTotalAvaliations(double totalAvaliations) {
+        this.totalAvaliations = totalAvaliations;
+    }
+    public void avaliationsCalculate(){
+        double total = 0;
+        for (int i = 0; i < avaliations.size(); i++){
+            total += i;
+        }
+        double calculus = total / totalAvaliations;
     }
 }
