@@ -8,25 +8,25 @@ import java.time.LocalDate;
 import java.util.Random;
 
 public class Roll extends Users{
-    private Random roll;
+    private int roll;
     private LocalDate registerDate;
     // Matrícula só é aprovada com o pagamento feito;
-    private PayCourse payCourse;
-    private boolean activPay;
+    private PayMethods payCourse;
+    private Status activPay;
 
-    public Roll(String name, String email, UserType userType, Status activeAccount, Random roll, LocalDate registerDate, PayCourse payCourse, boolean activPay) {
-        super(name, email, userType, activeAccount);
+    public Roll(String name, String email, double cash, int roll, LocalDate registerDate, PayMethods payCourse, Status activPay) {
+        super(name, email, cash);
         this.roll = roll;
         this.registerDate = registerDate;
         this.payCourse = payCourse;
         this.activPay = activPay;
     }
 
-    public Random getRoll() {
+    public int getRoll() {
         return roll;
     }
 
-    public void setRoll(Random roll) {
+    public void setRoll(int roll) {
         this.roll = roll;
     }
 
@@ -38,24 +38,24 @@ public class Roll extends Users{
         this.registerDate = registerDate;
     }
 
-    public PayCourse getPayCourse() {
+    public PayMethods getPayCourse() {
         return payCourse;
     }
 
-    public void setPayCourse(PayCourse payCourse) {
+    public void setPayCourse(PayMethods payCourse) {
         this.payCourse = payCourse;
     }
 
-    public boolean isActivPay() {
+    public Status isActivPay() {
         return activPay;
     }
 
-    public void setActivPay(boolean activPay) {
+    public void setActivPay(Status activPay) {
         this.activPay = activPay;
     }
 
     public String approvedPay(){
-        if (activPay == true){
+        if (activPay == Status.APPROVED){
             return "ROLL APPROVED.";
         }
         else{
