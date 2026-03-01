@@ -1,285 +1,228 @@
-# 🚀 Projeto: Sistema de Gestão de Plataforma de Cursos Online
-# 🎯 Objetivo
+# 🚀 Project: Online Course Platform Management System
 
-Desenvolver uma aplicação backend (console inicialmente) para gerenciar uma plataforma de cursos online, semelhante a:
+Develop a console-based backend application to manage an online course platform similar to Udemy and Coursera.
 
-Udemy
+The system must allow full control of users, courses, enrolments, progress, and payments.
 
-Coursera
+# 📌 Functional Requirements
 
-O sistema deve permitir controle completo de usuários, cursos, matrículas, progresso e pagamentos.
+## 1️⃣ User Management
 
-# 📌 Requisitos Funcionais
-## 1️⃣ Gestão de Usuários
+The system must allow:
 
-O sistema deve permitir:
+- User registration
+- Different user types with distinct behaviours
+- Data updates
+- Account deactivation
+- User listing
 
-Cadastro de usuários
+## Each user must have:
 
-Diferentes tipos de usuários com comportamentos distintos
+- Name
+- Email (unique)
+- Registration date
+- Account status
+- User type
 
-Atualização de dados
+## Some users may:
 
-Desativação de conta
+- Create courses
+- Purchase courses
+- Review courses
+- Administer the system
 
-Listagem de usuários
+---
 
-## Cada usuário deve ter:
+## 2️⃣ Course Management
 
-Nome
+The system must allow:
 
-Email (único)
+- Course creation
+- Publishing and unpublishing
+- Information updates
+- Listing by category
+- Keyword search
 
-Data de cadastro
+## Each course must have:
 
-Status da conta
+- Title
+- Description
+- Price
+- Responsible instructor
+- Category
+- Status (draft, published, archived)
+- Reviews
+- List of enrolled students
 
-Tipo de usuário
+---
 
-## Alguns usuários podem:
+## 3️⃣ Enrolments
 
-Criar cursos
+The system must allow:
 
-Comprar cursos
+- Users to enrol in published courses
+- Enrolment cancellation
+- Recording of enrolment date
+- Student progress tracking (completion percentage)
 
-Avaliar cursos
+**Rules:**
 
-Administrar o sistema
+- A user cannot enrol twice in the same course
+- Enrolment in unpublished courses is not allowed
+- Deactivated users cannot enrol
 
-## 2️⃣ Gestão de Cursos
+---
 
-O sistema deve permitir:
+## 4️⃣ Review System
 
-Criação de cursos
+After completing the course, the student may:
 
-Publicação e despublicação
+- Submit a rating (1 to 5)
+- Write a comment
+- Edit the review
 
-Atualização de informações
+**The system must:**
 
-Listagem por categoria
+- Calculate the course average rating
+- List reviews
 
-Busca por palavra-chave
+---
 
-## Cada curso deve ter:
+## 5️⃣ Payments
 
-Título
+Simulate a payment system:
 
-Descrição
+- Different payment methods
+- Transaction recording
+- Transaction status
+- Possibility of payment failure
 
-Preço
+**Rules:**
 
-Instrutor responsável
+- Enrolment is confirmed only after payment approval
+- Payment may be pending, approved, or declined
 
-Categoria
+---
 
-Status (rascunho, publicado, arquivado)
+## 6️⃣ Reports
 
-Avaliações
+The system must generate:
 
-Lista de alunos matriculados
+- Total sales per course
+- Total platform revenue
+- Top 5 best-selling courses
+- Average ratings per course
+- Instructor ranking by revenue
 
-## 3️⃣ Matrículas
+---
 
-O sistema deve permitir:
+# 📌 Technical Requirements (Advanced OOP)
 
-Usuário se matricular em curso publicado
+The project MUST obligatorily use:
 
-Cancelamento de matrícula
+## ✔ Encapsulation
 
-Registro de data de matrícula
+- No public attributes
+- Proper use of getters/setters
+- Internal validations
 
-Controle de progresso do aluno (percentual concluído)
+## ✔ Inheritance
 
-**Regras:**
+- At least one type hierarchy with real specialisations
 
-Não pode se matricular duas vezes no mesmo curso
+## ✔ Polymorphism
 
-Não pode se matricular em curso não publicado
-
-Usuário desativado não pode se matricular
-
-## 4️⃣ Sistema de Avaliação
-
-Após concluir o curso, o aluno pode:
-
-Avaliar com nota (1 a 5)
-
-Escrever comentário
-
-Editar avaliação
-
-**O sistema deve:**
-
-Calcular média do curso
-
-Listar avaliações
-
-## 5️⃣ Pagamentos
-
-Simular sistema de pagamento:
-
-Métodos de pagamento diferentes
-
-Registro de transação
-
-Status da transação
-
-Possibilidade de falha no pagamento
-
-**Regras:**
-
-Matrícula só é confirmada após pagamento aprovado
-
-Pagamento pode estar pendente, aprovado ou recusado
-
-## 6️⃣ Relatórios
-
-O sistema deve gerar:
-
-Total de vendas por curso
-
-Receita total da plataforma
-
-Top 5 cursos mais vendidos
-
-Média de avaliações por curso
-
-Ranking de instrutores por receita
-
-# 📌 Requisitos Técnicos (POO Avançado)
-
-O projeto DEVE obrigatoriamente usar:
-
-## ✔ Encapsulamento
-
-Nenhum atributo público
-
-Uso correto de getters/setters
-
-Validações internas
-
-## ✔ Herança
-
-Pelo menos uma hierarquia de tipos com especializações reais
-
-## ✔ Polimorfismo
-
-Métodos sobrescritos
-
-Uso de referências genéricas para comportamentos distintos
+- Overridden methods
+- Use of generic references for distinct behaviours
 
 ## ✔ Interfaces
 
-Contratos para comportamentos variáveis
+Contracts for variable behaviours.
 
-Exemplo: pagamento, avaliação, relatórios
+Example: payment, review, reporting.
 
 ## ✔ Enums
 
-Devem existir enums para:
+Enums must exist for:
 
-Status de conta
+- Account status
+- Course status
+- Payment status
+- User type
+- Course category
 
-Status de curso
+## ✔ Custom Exceptions
 
-Status de pagamento
+Create specific exceptions for:
 
-Tipo de usuário
-
-Categoria do curso
-
-## ✔ Exceptions customizadas
-
-Criar exceções específicas para:
-
-Usuário já cadastrado
-
-Curso não publicado
-
-Pagamento recusado
-
-Avaliação inválida
-
-Matrícula duplicada
+- User already registered
+- Course not published
+- Payment declined
+- Invalid review
+- Duplicate enrolment
 
 ## ✔ Collections
 
-Obrigatório usar:
+Mandatory use of:
 
-List
+- List
+- Set
+- Map
 
-Set
-
-Map
-
-Uso adequado de equals() e hashCode()
+Proper use of equals() and hashCode().
 
 ## ✔ Generics
 
-Aplicar generics onde fizer sentido.
+Apply generics where appropriate.
 
-## ✔ Princípios SOLID
+## ✔ SOLID Principles
 
-O projeto deve respeitar:
+The project must follow:
 
-SRP (Single Responsibility Principle)
+- SRP (Single Responsibility Principle)
+- OCP (Open/Closed Principle)
+- LSP
+- ISP
+- DIP
 
-OCP (Open/Closed Principle)
+## ✔ Mandatory Best Practices
 
-LSP
+- Immutable classes where appropriate
+- Use of Optional where applicable
+- Separation between domain and service layers
+- Business rules layer separated
+- Do not mix business logic with input handling
 
-ISP
+---
 
-DIP
+# 📌 Extra Requirements (Senior Level)
 
-## ✔ Boas práticas obrigatórias
+To raise the level:
 
-Classes imutáveis quando fizer sentido
+- Implement Strategy pattern for payments
+- Implement Factory pattern for object creation
+- Implement a custom Comparator
+- Implement operation logging
+- Create an in-memory persistence system simulation
+- Create unit tests (JUnit)
 
-Uso de Optional quando aplicável
+---
 
-Separação entre domínio e serviço
+# 📌 Constraints
 
-Camada de regras de negócio separada
+- Do not use frameworks (no Spring yet)
+- Pure Java only
+- No real database
+- Console interface only
 
-Não misturar regra com entrada de dados
+---
 
-# 📌 Requisitos Extras (nível sênior)
+# 📈 Expected Skill Level After Completion
 
-Para elevar o nível:
+If completed correctly, you will be comfortable with:
 
-Implementar Strategy para pagamentos
-
-Implementar Factory para criação de objetos
-
-Implementar Comparator personalizado
-
-Implementar logs de operações
-
-Criar sistema de persistência em memória simulada
-
-Criar testes unitários (JUnit)
-
-# 📌 Restrições
-
-Não usar frameworks (Spring ainda não)
-
-Apenas Java puro
-
-Sem banco de dados real
-
-Interface apenas via console
-
-📈 Nível Esperado Após Concluir
-
-Se você fizer isso corretamente, estará confortável com:
-
-Modelagem orientada a objetos real
-
-Arquitetura de sistemas
-
-Código limpo
-
-Design Patterns
-
-Pensamento de desenvolvedor pleno/sênior
+- Real object-oriented modelling
+- System architecture
+- Clean code
+- Design patterns
+- Mid-level/Senior developer thinking
