@@ -1,18 +1,31 @@
-# Prática de POO
-Hey! Aqui é o Dom Henrique!
+# OOP Practice
+Hey! This is Dom Henrique!
 
-Dei início aos meus estudos em Java no final de 2025 e pude ver o potencial da linguagem em algumas matérias online. Amplamente usada no mundo inteiro, o Java é usado para a construção de
-- Sistemas bancários eficientes;
-- Gerenciamento de bancos de dados;
-- Criação de sistemas web poderosos;
-- Desenvolvimento de jogos e afins.
+I started studying Java at the end of 2025 and was able to see the language's potential in some online courses. Widely used throughout the world, Java is used for building:
+- Efficient banking systems;
+- Database management;
+- Creation of powerful web systems;
+- Game development and the like.
 
-Neste repositório, você verá alguns projetos desenvolvidos aplicando conceitos de **Orientação a Objetos**, como *Herança, Polimorfismo, Abstração e Encapsulamento*.
-# Como clonar este repositório?
-Recomendo você utilizar o **Intelli J IDEA**, da JetBrains. Após a instalação, vá até o seu terminal e digite:
+In this repository, you will see some projects developed applying **Object-Oriented** concepts, such as *Inheritance, Polymorphism, Abstraction, and Encapsulation*.
+
+## How to clone this repository?
+
+I recommend using **IntelliJ IDEA** from JetBrains. After installation, go to your terminal and type:
 ```
 git clone https://github.com/Dom-Henrique/OOP---Java.git
 ```
-O repositório será baixado e clonado na sua máquina.
+The repository will be downloaded and cloned to your machine.
+## How this repository is structured?
+In folder ```src/com```, you'll see the packages in below:
+```
+:open_file_folder: src
+|__ :open_file_folder: com
+    |__ :file_folder: dealershipproject
+    |__ :file_folder: electricityproject
+    |__ :file_folder: marketingagency
+    |__ :file_folder: oop/learning
+    |__ :file_folder: seminar
+```
 
-***Dom Henrique, 2026.***
+***Dom Henrique | British English B2***
