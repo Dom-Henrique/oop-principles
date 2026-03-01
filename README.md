@@ -19,14 +19,14 @@ The repository will be downloaded and cloned to your machine.
 ## How this repository is structured?
 In folder ```src/com```, you'll see the packages in below:
 ```
-:open_file_folder: src
-|__ :open_file_folder: com
-    |__ :file_folder: course
-    |__ :file_folder: dealershipproject
-    |__ :file_folder: electricityproject
-    |__ :file_folder: marketingagency
-    |__ :file_folder: oop/learning
-    |__ :file_folder: seminar
+📂 src
+|__ 📂 com
+    |__ 📁 course
+    |__ 📁 dealershipproject
+    |__ 📁 electricityproject
+    |__ 📁 marketingagency
+    |__ 📁 oop/learning
+    |__ 📁 seminar
 ```
 
 ***Dom Henrique | British English B2***
