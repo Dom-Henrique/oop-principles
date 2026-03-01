@@ -13,18 +13,17 @@ public class Users {
     private ArrayList<Course> rolledCourses = new ArrayList<>();
     private double cash;
     private PayMethods payMethod;
-    public Users(String name, String email, UserType userType, Status activeAccount){
+    public Users(String name, String email, UserType userType){
         this.name = name;
         this.email = email;
         this.userType = userType;
-        this.activeAccount = activeAccount;
+        this.activeAccount = Status.ACITVE;
     }
 
-    public Users(String name, String email, UserType userType, Status activeAccount,double cash) {
+    public Users(String name, String email, double cash) {
         this.name = name;
         this.email = email;
-        this.userType = userType;
-        this.activeAccount = activeAccount;
+        this.activeAccount = Status.ACITVE;
         this.rolledCourses = rolledCourses;
         this.cash = cash;
     }
