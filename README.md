@@ -21,6 +21,7 @@ In folder ```src/com```, you'll see the packages in below:
 ```
 :open_file_folder: src
 |__ :open_file_folder: com
+    |__ :file_folder: course
     |__ :file_folder: dealershipproject
     |__ :file_folder: electricityproject
     |__ :file_folder: marketingagency
