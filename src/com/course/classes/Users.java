@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Users {
-    private String name, email;
+    private String name, email, password;
     private UserType userType;
     private Status activeAccount;
     private ArrayList<Course> rolledCourses = new ArrayList<>();
@@ -20,12 +20,13 @@ public class Users {
         this.activeAccount = Status.ACITVE;
     }
 
-    public Users(String name, String email, double cash) {
+    public Users(String name, String email, double cash, String password) {
         this.name = name;
         this.email = email;
         this.activeAccount = Status.ACITVE;
         this.rolledCourses = rolledCourses;
         this.cash = cash;
+        this.password = password;
     }
 
     public String getName() {
@@ -82,5 +83,13 @@ public class Users {
 
     public void setPayMethod(PayMethods payMethod) {
         this.payMethod = payMethod;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
