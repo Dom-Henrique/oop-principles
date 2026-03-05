@@ -14,8 +14,8 @@ public class Roll extends Users{
     private PayMethods payCourse;
     private Status activPay;
 
-    public Roll(String name, String email, double cash, int roll, LocalDate registerDate, PayMethods payCourse, Status activPay) {
-        super(name, email, cash);
+    public Roll(String name, String email, double cash, String password, int roll, LocalDate registerDate, PayMethods payCourse, Status activPay) {
+        super(name, email, cash, password);
         this.roll = roll;
         this.registerDate = registerDate;
         this.payCourse = payCourse;
